@@ -18,7 +18,13 @@ export default function Locator({ locData, locFacts }) {
   return (
     <Grid container spacing={0} justifyContent="center">
       <Grid item m={1}>
-        <Paper>
+        <Paper
+          elevation={6}
+          sx={{
+            height: 325,
+            width: 325,
+          }}
+        >
           <MapContainer
             center={[locData.location.lat, locData.location.lng]}
             zoom={13}
@@ -37,7 +43,7 @@ export default function Locator({ locData, locFacts }) {
       </Grid>
 
       <Grid item m={1}>
-        <Card sx={{ maxWidth: 350, height: 350 }}>
+        <Card sx={{ width: 325, height: 325 }} elevation={6} square>
           <CardMedia
             component="img"
             height="140"
@@ -47,7 +53,7 @@ export default function Locator({ locData, locFacts }) {
           <CardContent>
             <Typography
               gutterBottom
-              variant="h5"
+              variant="h6"
               component="div"
               textAlign="center"
             >
@@ -60,10 +66,8 @@ export default function Locator({ locData, locFacts }) {
               textAlign="center"
             >
               You are in <strong>{locData.location.city},</strong>{" "}
-              <strong>{locFacts.name}</strong>. Free API keys provide scant
-              data, so the best fact I can offer you is that{" "}
-              <strong>{locFacts.name}</strong> is in{" "}
-              <strong>{locFacts.region}</strong>.{" "}
+              <strong>{locFacts.name}</strong>. <br />
+              Which is in <strong>{locFacts.region}</strong> btw.{" "}
             </Typography>
             <Typography
               variant="body2"
