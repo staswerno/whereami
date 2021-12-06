@@ -16,8 +16,14 @@ export default function Locator({ locData, locFacts }) {
   console.log(dt.year);
 
   return (
-    <Grid container spacing={0} justifyContent="center">
-      <Grid item m={1}>
+    <Grid
+      container
+      spacing={3}
+      mt={1}
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Grid item>
         <Paper
           elevation={6}
           sx={{
@@ -42,7 +48,7 @@ export default function Locator({ locData, locFacts }) {
         </Paper>
       </Grid>
 
-      <Grid item m={1}>
+      <Grid item>
         <Card sx={{ width: 325, height: 325 }} elevation={6} square>
           <CardMedia
             component="img"
