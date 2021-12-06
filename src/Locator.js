@@ -19,7 +19,8 @@ export default function Locator({ locData, locFacts }) {
     <Grid
       container
       spacing={3}
-      mt={1}
+      mb={4}
+      mr={1}
       justifyContent="center"
       alignItems="center"
     >
