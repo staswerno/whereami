@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { tempObj, tempFacts } from "./data";
 import Locator from "./Locator";
 import "./App.css";
-import { Typography } from "@mui/material";
+import { Typography, Paper } from "@mui/material";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true); //change when update to api
@@ -46,16 +46,20 @@ function App() {
     if (isError) {
       return (
         <div>
-          <Typography>
-            something went wrong :( the api may have reached its request limit
-          </Typography>
+          <Paper>
+            <Typography m={4}>
+              something went wrong :( the api may have reached its request limit
+            </Typography>
+          </Paper>
         </div>
       );
     }
     if (isLoading) {
       return (
         <div>
-          <Typography>loading</Typography>
+          <Paper>
+            <Typography m={4}>loading</Typography>
+          </Paper>
         </div>
       );
     }
