@@ -13,7 +13,13 @@ import { DateTime } from "luxon";
 export default function Locator({ locData, locFacts }) {
   const mapUrl = `https://api.mapbox.com/styles/v1/staswerno/ckwul5ede58pt14mkqz1m37et/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_API}`;
   const dt = DateTime.now();
+
+  const alphaCode = locData.location.country;
+  const lowAlpha = alphaCode.toLowerCase();
+  const flagUrl = `https://flagcdn.com/w320/${lowAlpha}.jpg`;
+
   console.log(dt.year);
+  console.log(flagUrl);
 
   return (
     <Grid
@@ -51,12 +57,7 @@ export default function Locator({ locData, locFacts }) {
 
       <Grid item>
         <Card sx={{ width: 325, height: 325 }} elevation={6} square>
-          <CardMedia
-            component="img"
-            height="140"
-            image={locFacts.flag}
-            alt="flag"
-          />
+          <CardMedia component="img" height="140" image={flagUrl} alt="flag" />
           <CardContent>
             <Typography
               gutterBottom
