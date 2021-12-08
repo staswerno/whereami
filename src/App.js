@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { tempObj, tempFacts } from "./data";
 import Locator from "./Locator";
 import "./App.css";
-import { Typography, Paper } from "@mui/material";
+import { Typography, Paper, Link } from "@mui/material";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true); //change when update to api
@@ -47,8 +47,11 @@ function App() {
       return (
         <div>
           <Paper>
-            <Typography m={4}>
-              something went wrong :( the api may have reached its request limit
+            <Typography m={4} textAlign="center">
+              the api has reached its request limit <br />
+              <Link href="https://staswerno.github.io/whereami_local/">
+                check out a version of this website using local data
+              </Link>
             </Typography>
           </Paper>
         </div>
