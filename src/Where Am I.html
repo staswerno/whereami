@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/whereami/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/whereami/logo192.png">
+    <link rel="stylesheet" href="./Where Am I_files/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+   <link rel="stylesheet" href="./Where Am I_files/css">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/whereami/manifest.json">
+    <!--
+      Notice the use of /whereami in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/whereami/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Where Am I</title>
+  <style>.leaflet-container {
+  height: 325px;
+  width: 325px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url(/whereami/static/media/town.27812542.png);
+  background-size: cover;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvQXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsYUFBYTtFQUNiLG1EQUEyQjtFQUMzQixzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsWUFBWTtFQUNaLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsbUJBQW1CO0FBQ3JCIiwic291cmNlc0NvbnRlbnQiOlsiLmxlYWZsZXQtY29udGFpbmVyIHtcbiAgaGVpZ2h0OiAzMjVweDtcbiAgd2lkdGg6IDMyNXB4O1xufVxuXG5ib2R5IHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwdmg7XG4gIGJhY2tncm91bmQ6IHVybChcInRvd24ucG5nXCIpO1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufVxuXG4jcm9vdCB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style data-emotion="css" data-s="">.css-1ps6pg7-MuiPaper-root{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:4px;box-shadow:0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);}</style><style data-emotion="css" data-s="">.css-1jmylmz-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;margin:32px;}</style><style data-emotion="css" data-s="">.css-1veek9o-MuiGrid-root{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-top:-24px;width:calc(100% + 24px);margin-left:-24px;margin-bottom:32px;margin-right:8px;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}</style><style data-emotion="css" data-s="">.css-1veek9o-MuiGrid-root>.MuiGrid-item{padding-top:24px;}</style><style data-emotion="css" data-s="">.css-1veek9o-MuiGrid-root>.MuiGrid-item{padding-left:24px;}</style><style data-emotion="css" data-s="">.css-13i4rnv-MuiGrid-root{box-sizing:border-box;margin:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}</style><style data-emotion="css" data-s="">.css-m3ktt1-MuiPaper-root{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:4px;box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);height:325px;width:325px;}</style><style data-emotion="css" data-s="">.css-19f94b4-MuiCard-root{overflow:hidden;width:325px;height:325px;}</style><style data-emotion="css" data-s="">.css-208t5q-MuiPaper-root-MuiCard-root{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);overflow:hidden;width:325px;height:325px;}</style><style data-emotion="css" data-s="">.css-o69gx8-MuiCardMedia-root{display:block;-webkit-background-size:cover;background-size:cover;background-repeat:no-repeat;-webkit-background-position:center;background-position:center;width:100%;object-fit:cover;}</style><style data-emotion="css" data-s="">.css-46bh2p-MuiCardContent-root{padding:16px;}</style><style data-emotion="css" data-s="">.css-46bh2p-MuiCardContent-root:last-child{padding-bottom:24px;}</style><style data-emotion="css" data-s="">.css-baxsg6-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:1.25rem;line-height:1.6;letter-spacing:0.0075em;margin-bottom:0.35em;text-align:center;}</style><style data-emotion="css" data-s="">.css-1wabw6i-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;margin-bottom:0.35em;color:rgba(0, 0, 0, 0.6);text-align:center;}</style><style data-emotion="css" data-s="">.css-1da0jfs-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;color:rgba(0, 0, 0, 0.6);text-align:center;}</style><script charset="utf-8" src="./Where Am I_files/main.efa93a6d317c9d525a16.hot-update.js"></script><script charset="utf-8" src="./Where Am I_files/main.d8579f9e849b9c0ae40a.hot-update.js"></script><script charset="utf-8" src="./Where Am I_files/main.21b9b9e41c3d202f3272.hot-update.js"></script><script charset="utf-8" src="./Where Am I_files/main.15e7d7d3857d9145d339.hot-update.js"></script><script charset="utf-8" src="./Where Am I_files/main.d91ff26cb7a914cbeee1.hot-update.js"></script><script charset="utf-8" src="./Where Am I_files/main.83a8d735004e31196019.hot-update.js"></script><script charset="utf-8" src="./Where Am I_files/main.5c100b9fdb4529913d55.hot-update.js"></script><script charset="utf-8" src="./Where Am I_files/main.2a9b364b66d8ac9eadae.hot-update.js"></script><script charset="utf-8" src="./Where Am I_files/main.69afd341c8835d3b0c32.hot-update.js"></script><script charset="utf-8" src="./Where Am I_files/main.ae58397a80bc10735647.hot-update.js"></script></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1veek9o-MuiGrid-root"><div class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-m3ktt1-MuiPaper-root"><div class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="./Where Am I_files/2706@2x" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(44px, -48px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Where Am I_files/2707@2x" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(44px, 208px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Where Am I_files/2706@2x(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-212px, -48px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Where Am I_files/2706@2x(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(300px, -48px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Where Am I_files/2707@2x(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-212px, 208px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Where Am I_files/2707@2x(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(300px, 208px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="./Where Am I_files/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(162px, 162px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"><img src="./Where Am I_files/marker-icon-2x.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(162px, 162px, 0px); z-index: 162;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(1.11679e+06px, 692946px, 0px) scale(4096);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://localhost:3000/#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="http://localhost:3000/#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | © <a href="https://www.mapbox.com/about/maps/">Mapbox</a></div></div></div></div></div></div><div class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"><div class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation6 MuiCard-root css-208t5q-MuiPaper-root-MuiCard-root"><img class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root" src="./Where Am I_files/de.jpg" height="160" alt="flag"><div class="MuiCardContent-root css-46bh2p-MuiCardContent-root"><div class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-baxsg6-MuiTypography-root">Your IP is 92.195.50.215</div><p class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-1wabw6i-MuiTypography-root">You are in <strong>Eggersdorf,</strong> <strong></strong>. <br>Which is in <strong></strong> btw. </p><p class="MuiTypography-root MuiTypography-body2 css-1da0jfs-MuiTypography-root">You requested this information on: <br> <strong>2021/12/8</strong>, at <strong>13:43:38</strong></p></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./Where Am I_files/bundle.js"></script><script src="./Where Am I_files/vendors_main.chunk.js"></script><script src="./Where Am I_files/main.chunk.js"></script>
+
+</body></html>

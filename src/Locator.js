@@ -57,7 +57,7 @@ export default function Locator({ locData, locFacts }) {
 
       <Grid item>
         <Card sx={{ width: 325, height: 325 }} elevation={6} square>
-          <CardMedia component="img" height="140" image={flagUrl} alt="flag" />
+          <CardMedia component="img" height="160" image={flagUrl} alt="flag" />
           <CardContent>
             <Typography
               gutterBottom
@@ -85,7 +85,9 @@ export default function Locator({ locData, locFacts }) {
               You requested this information on: <br />{" "}
               <strong>
                 {dt.year}/{dt.month}/{dt.day}
-                <br />
+              </strong>{" "}
+              at{" "}
+              <strong>
                 {dt.hour}:{dt.minute}:{dt.second}
               </strong>
             </Typography>

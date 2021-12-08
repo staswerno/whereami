@@ -71,7 +71,7 @@ const tempFacts = {
     nl: "Duitsland",
     pt: "Alemanha",
   },
-  flag: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fflagdom.com%2Fflag-resources%2Fflag-images%2Finternational%2Fgermany%2Fgermany-flag_3000x1800.png",
+  flag: "https://flagcdn.com/w320/de.jpg",
   regionalBlocs: [
     {
       acronym: "EU",
